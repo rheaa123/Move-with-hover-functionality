@@ -1,0 +1,14 @@
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  border-bottom: 1px solid #ccc;
+}
+
+.move-button {
+  display: none;
+}
+
+.task:hover .move-button {
+  display: inline;
+}

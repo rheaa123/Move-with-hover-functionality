@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .task {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+    .move-button {
+      display: none;
+    }
+    .task:hover .move-button {
+      display: inline;
+    }
+    .hidden {
+      display: none;
+    }
+    .tab {
+      display: inline-block;
+      padding: 10px;
+      cursor: pointer;
+      background-color: #f1f1f1;
+      margin-right: 5px;
+    }
+    .active-tab {
+      background-color: #ccc;
+    }
+  </style>
+</head>
+<body>
+  <div id="tabs">
+    <div id="toDoTab" class="tab active-tab">To-Do List</div>
+    <div id="hiddenTab" class="tab">Hidden Tasks</div>
+  </div>
+  <div id="toDoSection">
+    <h1>To-Do List</h1>
+    <input type="text" id="taskInput" placeholder="New task...">
+    <button id="addTaskButton">Add Task</button>
+    <ul id="taskList"></ul>
+  </div>
+  <div id="hiddenSection" class="hidden">
+    <h1>Hidden Tasks</h1>
+    <ul id="hiddenTaskList"></ul>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .task {
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+    .move-button {
+      display: none;
+    }
+    .task:hover .move-button {
+      display: inline;
+    }
+  </style>
+</head>
+<body>
+  <h1>To-Do List</h1>
+  <input type="text" id="taskInput" placeholder="New task...">
+  <button id="addTaskButton">Add Task</button>
+  <button id="showHiddenTasksButton">Hidden Tasks</button>
+  <ul id="taskList"></ul>
+  <div id="hiddenTasksContainer" style="display: none;"></div>
+  <script src="popup.js"></script>
+</body>
+</html> -->

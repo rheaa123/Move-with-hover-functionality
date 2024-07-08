@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hidden Tasks</title>
+</head>
+<body>
+  <h1>Hidden Tasks</h1>
+  <ul id="hiddenTaskList"></ul>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const hiddenTaskList = document.getElementById('hiddenTaskList');
+
+      chrome.storage.local.get({ hiddenTasks: [] }, function(result) {
+        const hiddenTasks = result.hiddenTasks;
+        hiddenTasks.forEach(task => {
+          const taskItem = document.createElement('li');
+          taskItem.textContent = task;
+          hiddenTaskList.appendChild(taskItem);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .task {
+      padding: 5px;
+      border-bottom: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <h1>Hidden Tasks</h1>
+  <ul id="hiddenTaskList"></ul>
+  <script src="hidden.js"></script>
+</body>
+</html> -->
+
